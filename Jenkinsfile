@@ -28,7 +28,7 @@ pipeline {
         stage("DEPLOY"){
             steps{
                 echo "Deploying the contianer and removing old container "
-                 sh "docker-compose down && docker-compose up -d"
+                 sh "docker-compose up -d"
             }
             
         }
