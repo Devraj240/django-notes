@@ -28,7 +28,7 @@ pipeline {
         stage("DEPLOY"){
             steps{
                 echo "Deploying the contianer and removing old container "
-                 sh "docker-compose up -d"
+                sh "docker run -d -p 8000:8000 ${env.deraooo}/my-note-app:latest"
             }
             
         }
